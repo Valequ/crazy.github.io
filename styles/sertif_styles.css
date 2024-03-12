@@ -1,0 +1,330 @@
+
+main{
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+}
+footer{
+    background-color: rgb(213, 229, 154);
+}
+body{
+    width: 100%;
+    overflow-x: hidden;
+    background-color: rgb(245, 215, 167);
+    margin: 0;
+}
+.header{
+    position: fixed;
+    display: flex;
+    background-color: rgb(122, 136, 73);
+    flex-direction: row;
+    width: 100%;
+    height: 80px;
+    top:0;
+    left: 0;   
+    height: 60px;
+    z-index: 3;
+}
+
+.header_burger-btn   {
+    display: none;
+    position: relative;
+    width: 40px;
+    margin-right:30px ;
+    height: 40px;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    cursor: pointer;
+   
+}
+
+.header_burger-btn span{
+    position: absolute;
+    width: 30px;
+    height: 3px;
+    background-color:rgb(213, 229, 154);;
+    left: 5px;
+    transition: background-color .5s, opacity .25s, transform .5s
+}
+
+.header_burger-btn:hover span{
+    background-color:rgb(55, 71, 55) ;
+}
+.header_burger-btn span:nth-child(1){
+
+    transform: translateY(-10px);
+}
+.header_burger-btn span:nth-child(2){
+}
+.header_burger-btn span:nth-child(3){
+    transform: translateY(10px);
+}
+
+
+
+/*крестик*/
+.header.open .header_burger-btn span:nth-child(1){
+    transform: translateY(0px) rotate(45deg);
+    background-color: rgb(122, 136, 73);
+
+}
+.header.open .header_burger-btn span:nth-child(2){
+    opacity: 0;
+}
+.header.open .header_burger-btn span:nth-child(3){
+    background-color: rgb(122, 136, 73);
+    transform: translateY(0px) rotate(-45deg);
+}
+.header.open .menu{  
+    visibility: visible;
+}
+
+.content-wrapper {
+    margin-top: 48px;
+}
+
+.container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.left{
+    display: flex;
+    width: 10%;
+}
+.logo {
+    width: 70px;
+    margin: 6px 0;
+    cursor: pointer;
+}
+.menu{
+    display: flex;
+    width: 100%;
+    column-gap: 20px;
+    align-items: center; 
+    justify-content: space-around; 
+    transition: transform .5s, visibility .2s ;
+}
+.nav_link{
+    font-size: 12px;
+    color: antiquewhite;
+    text-decoration: none;/*убираем подчеркивания*/
+    transition:color .2s linear;
+    text-transform:uppercase;
+}
+.button {
+    background-color: rgb(213, 229, 154);
+    border-radius: 15px;
+    border: 1px solid black;
+    width: 20%;
+    height: 35px;
+    /* margin: auto; */
+    color: rgb(147, 127, 99);
+}
+.button:hover{
+    background-color:rgb(145, 161, 86) ;
+    cursor: pointer;
+    color: white;
+
+}
+
+.vxodregistr{
+    display: flex;
+    width: 20%;
+    align-items: center; 
+     
+}
+
+.menu-burger__header span, .menu-burger__header:after, .menu-burger__header:before{
+    height: 3px;
+    width: 100%;
+    position: absolute;
+    background: #515758;
+    margin: 0 auto;
+}
+.menu-burger__header span{
+    top: 21px;
+}
+.menu-burger__header:after, .menu-burger__header:before{
+    content: '';
+}
+.menu-burger__header:after{
+    bottom: 5px;
+}
+.menu-burger__header:before{
+    top: 5px;
+}
+.zabota{
+    display: flex;
+    flex-direction: row;
+    column-gap: 10px;
+    width: 100%;
+    background-color:rgb(213, 229, 154);
+    margin-top: 70px;
+
+
+}
+.left_zabota {
+    display: flex;
+    width: 50%;
+    background-image: url(https://krasavica.info/uploads/posts/2022-12/1672225141_krasavica-info-p-tsveti-vetochki-krasivo-49.png);
+    background-size: cover;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+.left_zabota h1{
+    color: #000;
+  background: #fff;
+  mix-blend-mode: lighten;
+  font-size:50px;
+  border-radius: 10px;
+}
+.right_zabota{
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+    width: 50%;
+}
+.glava {
+    display: flex;
+    width: 300px;
+    height: 40px;
+    border-radius: 20px;
+    background-color: rgb(169, 182, 124);
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+}
+.glava_opis{
+    text-align: left;
+    width: 90%;
+}
+.glava_opis p {
+    font-size: 21px;
+}
+.sertif_prise{
+    display: flex;
+    flex-direction: row;
+    column-gap: 10px;
+    margin-left: 20px;
+}
+.left_sertif_prise{
+    display: flex;
+    width: 50%;
+}
+.left_sertif_prise p {
+    position: absolute;
+    font-size: 60px;
+    z-index: 2;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+.photo {
+    width: 600px;
+    height: 400px;
+    z-index: 1;
+    background-image: url(https://optim.tildacdn.com/tild3436-3737-4536-b861-613031633131/-/resize/694x/-/format/webp/noroot.png);
+    background-size: cover;
+    margin-left: 150px;
+}
+.right_sertif_prise{
+    display: flex;
+    flex-direction: column;
+    row-gap: 30px;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+
+}
+.money{
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    border-radius: 20px;
+
+    background-color: rgb(231, 231, 231);
+}
+.money_top{
+    display: flex;
+    text-align: center;
+    align-items: left;
+    justify-content: center; 
+}
+.money_top h3 {
+    font-size: 30px;
+    margin-bottom: 0;
+}
+.money_center{
+    display: flex;
+}
+.money_center p{
+    margin-left: 20px;
+}
+.button_card {
+    cursor: pointer;
+    width: 100%;
+    background-color: rgb(145, 161, 86);
+    color: antiquewhite;
+    border-radius: 10px;
+    padding: 5px;
+    border: 1px solid black;
+}
+.button4{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+
+.footer{
+    display: flex;
+    flex-direction: column;
+    row-gap: 15px;
+    background-color: rgb(213, 229, 154);
+    width: 100%;
+    height: 200px;
+    margin-top: 100px;
+    bottom: 0;
+}
+.footer_top{
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+    column-gap: 10px;
+    width: 100%;
+
+}
+.ceti{
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    height: 60px;
+    margin: auto;
+    align-items: center;
+
+}
+.ceti1{
+    display: flex;
+    flex-direction: row;
+    column-gap: 20px;
+    width: 30%;
+    margin: auto;
+    height: 50px;
+    justify-content: space-around;
+}
+.text{
+    font-size: 17px;
+    color: rgb(145, 161, 86);
+
+    
+}
+.vk{
+    margin: auto;
+    width: 35px;
+}
+.footer_center{
+    text-align: center;
+    color: rgb(145, 161, 86);
+}
